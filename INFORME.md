@@ -1,10 +1,10 @@
 
 ## Integrantes nombre y apellido
 
-Integrante 1: Sofía Ortega Rodas
-Integrante 2: Vilca Juan Ignacio
-Integrante 3: Ezequiel Asael Jara
-Integrante 4: Cristian Gustavo Canavides
+- Integrante 1: Sofía Ortega Rodas
+- Integrante 2: Vilca Juan Ignacio
+- Integrante 3: Ezequiel Asael Jara
+- Integrante 4: Cristian Gustavo Canavides
 
 
 ## Descripción ejercicio 1: 
