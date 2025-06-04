@@ -52,7 +52,7 @@ Al paisaje anterior se le añade la sig. animación: el tren se desplaza cruzand
 
 * ret (retorno) : Indica que se ha completado una subrutina. Uso en el Ejercicio 1: Marca el final de las subrutinas draw_rectangle y draw_circle, devolviendo el control al punto desde donde fueron llamadas (en este caso, main)
 
-> Ejercicio 1: 
+> Ejercicio 2: 
 
 Se usaron practicamente las mismas instrucciones ARMv8, salvo las siguientes que nos permitieron añadir dinamismo a la imagen estática: 
 
