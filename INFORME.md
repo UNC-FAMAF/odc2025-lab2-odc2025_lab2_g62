@@ -14,7 +14,7 @@ Realizamos un paisaje urbano nocturno con un cielo degradado y estrellado, luna,
 
 ## Descripción ejercicio 2:
 
-Al paisaje anterior se le añade la sig. animación: el tren se desplaza cruzando el puente, y el cartel neón parpadea. Se actualizaron las coordenadas del tren en movimiento, y se alteraron los colores del cartel de neón, borrando y redibujando objetos en cada frame.
+Al paisaje anterior se le añade la sig. animación: el tren se desplaza sobre el puente, las estrellas titilan, y el cartel neón parpadea.
 
 
 ## Justificación instrucciones ARMv8:
