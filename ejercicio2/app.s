@@ -479,6 +479,55 @@ DrawTrain: // Etiqueta para dibujar el tren
     mov x21, #323; mov x22, #332; mov x23, #12; mov x24, #2; bl draw_rectangle // Horizontal inferior
 
 .Lend_blinking_logic:
+    add x6, x6, #1 // Incrementa el contador de parpadeo
+    and x10, x6, #0b11 // 
+    cmp x10, #0 // Compara con 0 
+    beq .Ldraw_stars_on
+    b .Ldraw_stars_off
+    
+.Ldraw_stars_on:
+    // Estrellas encendidas 
+    movz w25, #0xFFFF, lsl #0
+    movk w25, #0xFFFF, lsl #16
+    b .Ldraw_stars
+
+.Ldraw_stars_off:
+    // Estrellas menos blancas
+    movz w25, #0xAAAA, lsl #0 // un blanco mas apagado
+    movk w25, #0xFFAA, lsl #16
+
+.Ldraw_stars:
+    // Dibuja las estrellas (1x1) y (3x3)
+    mov x21, #50; mov x22, #10; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #120; mov x22, #25; mov x23, #1; mov x24, #1; bl draw_rectangle
+    mov x21, #200; mov x22, #15; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #280; mov x22, #5; mov x23, #1; mov x24, #1; bl draw_rectangle
+    mov x21, #350; mov x22, #30; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #410; mov x22, #10; mov x23, #1; mov x24, #1; bl draw_rectangle
+    mov x21, #480; mov x22, #40; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #550; mov x22, #20; mov x23, #1; mov x24, #1; bl draw_rectangle
+    mov x21, #600; mov x22, #50; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #10; mov x22, #60; mov x23, #1; mov x24, #1; bl draw_rectangle
+    mov x21, #70; mov x22, #80; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #140; mov x22, #90; mov x23, #1; mov x24, #1; bl draw_rectangle
+    mov x21, #220; mov x22, #70; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #310; mov x22, #60; mov x23, #1; mov x24, #1; bl draw_rectangle
+    mov x21, #390; mov x22, #80; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #470; mov x22, #90; mov x23, #1; mov x24, #1; bl draw_rectangle
+    mov x21, #530; mov x22, #70; mov x23, #3; mov x24, #3; bl draw_rectangle
+    mov x21, #590; mov x22, #80; mov x23, #1; mov x24, #1; bl draw_rectangle
+
+    // Dibuja las estrellas más grandes (2x2)
+    mov x21, #20; mov x22, #30; mov x23, #2; mov x24, #2; bl draw_rectangle
+    mov x21, #90; mov x22, #5; mov x23, #2; mov x24, #2; bl draw_rectangle
+    mov x21, #160; mov x22, #40; mov x23, #2; mov x24, #2; bl draw_rectangle
+    mov x21, #240; mov x22, #20; mov x23, #2; mov x24, #2; bl draw_rectangle
+    mov x21, #300; mov x22, #50; mov x23, #2; mov x24, #2; bl draw_rectangle
+    mov x21, #380; mov x22, #25; mov x23, #2; mov x24, #2; bl draw_rectangle
+    mov x21, #450; mov x22, #15; mov x23, #2; mov x24, #2; bl draw_rectangle
+    mov x21, #510; mov x22, #35; mov x23, #2; mov x24, #2; bl draw_rectangle
+    mov x21, #570; mov x22, #10; mov x23, #2; mov x24, #2; bl draw_rectangle
+    
     // Retardo para controlar la velocidad de la animación
     mov x0, #0x1000000 // Valor de retardo
     bl delay
