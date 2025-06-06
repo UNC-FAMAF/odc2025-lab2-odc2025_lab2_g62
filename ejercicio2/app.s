@@ -514,7 +514,6 @@ DrawTrain: // Etiqueta para dibujar el tren
     mov x21, #310; mov x22, #60; mov x23, #1; mov x24, #1; bl draw_rectangle
     mov x21, #390; mov x22, #80; mov x23, #3; mov x24, #3; bl draw_rectangle
     mov x21, #470; mov x22, #90; mov x23, #1; mov x24, #1; bl draw_rectangle
-    mov x21, #530; mov x22, #70; mov x23, #3; mov x24, #3; bl draw_rectangle
     mov x21, #590; mov x22, #80; mov x23, #1; mov x24, #1; bl draw_rectangle
 
     // Dibuja las estrellas más grandes (2x2)
